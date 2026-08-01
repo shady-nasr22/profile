@@ -123,7 +123,7 @@
 
     .hero-name {
 
-        font-size: 48px;
+        font-size: 36px;
         justify-content: center;
         gap: 12px;
 
@@ -325,6 +325,20 @@
         align-items: center;
 
         justify-content: center;
+        
+        width: 52px;
+        height: 52px;
+        border: 1px solid rgba(18, 214, 255, .3);
+        border-radius: 10px;
+        background: rgba(18, 214, 255, .08);
+        transition: .3s;
+
+    }
+
+    .menu-toggle:hover {
+
+        background: rgba(18, 214, 255, .15);
+        border-color: rgba(18, 214, 255, .6);
 
     }
 
