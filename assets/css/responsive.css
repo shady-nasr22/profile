@@ -1,0 +1,264 @@
+/* =========================================
+   Large Tablets
+========================================= */
+
+@media (max-width:1200px) {
+
+    .hero {
+
+        flex-direction: column;
+
+        text-align: center;
+
+        padding-top: 140px;
+
+        gap: 70px;
+
+    }
+
+    .hero-left,
+    .hero-right {
+
+        width: 100%;
+
+    }
+
+    .hero-name {
+
+        justify-content: center;
+
+        font-size: 72px;
+
+    }
+
+    .hero-left h2 {
+
+        font-size: 34px;
+
+    }
+
+    .description {
+
+        margin: auto;
+
+    }
+
+    .buttons {
+
+        justify-content: center;
+
+    }
+
+    .follow {
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+    }
+
+    .image-box {
+
+        width: 450px;
+
+        height: 580px;
+
+    }
+
+    .about-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+}
+
+/* =========================================
+   Tablets
+========================================= */
+
+@media (max-width:768px) {
+
+    .navbar {
+
+        height: 80px;
+
+    }
+
+    .navbar ul {
+
+        display: none;
+
+    }
+
+    .logo span {
+
+        font-size: 28px;
+
+    }
+
+    .cv-btn {
+
+        display: none;
+
+    }
+
+    .hero {
+
+        padding-top: 120px;
+
+    }
+
+    .hero-name {
+
+        font-size: 52px;
+
+        gap: 10px;
+
+    }
+
+    .hero-left h2 {
+
+        font-size: 26px;
+
+        letter-spacing: 2px;
+
+    }
+
+    .description {
+
+        font-size: 18px;
+
+        line-height: 32px;
+
+    }
+
+    .buttons {
+
+        flex-direction: column;
+
+        width: 100%;
+
+    }
+
+    .primary-btn,
+    .secondary-btn {
+
+        width: 100%;
+
+        max-width: 320px;
+
+    }
+
+    .image-box {
+
+        width: 330px;
+
+        height: 430px;
+
+    }
+
+    .socials {
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+
+    }
+
+    .socials a {
+
+        width: 65px;
+
+        height: 65px;
+
+    }
+
+    .about-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .certificate {
+
+        width: 300px;
+
+        height: 200px;
+
+    }
+
+    .contact-box input,
+    .contact-box textarea {
+
+        font-size: 16px;
+
+    }
+
+}
+
+/* =========================================
+   Phones
+========================================= */
+
+@media (max-width:480px) {
+
+    .hero-name {
+
+        font-size: 38px;
+
+    }
+
+    .hero-left h2 {
+
+        font-size: 20px;
+
+    }
+
+    .description {
+
+        font-size: 16px;
+
+        line-height: 28px;
+
+    }
+
+    .image-box {
+
+        width: 280px;
+
+        height: 360px;
+
+    }
+
+    .section-title {
+
+        font-size: 34px;
+
+    }
+
+    .about-card {
+
+        padding: 25px;
+
+    }
+
+    .certificate {
+
+        width: 260px;
+
+        height: 170px;
+
+    }
+
+    footer {
+
+        font-size: 13px;
+
+        padding: 25px;
+
+    }
+
+}
