@@ -18,8 +18,11 @@
         rel="stylesheet">
 
     <link rel="stylesheet" href="assets/css/style.css">
-
+    <link rel="stylesheet" href="assets/css/responsive.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 
 <body>
@@ -32,43 +35,43 @@
 
     <!--================ NAVBAR ================-->
 
-    <header>
+   <nav class="navbar">
 
-        <nav class="navbar">
+    <a href="#" class="logo">
 
-            <div class="logo">
+        <img src="assets/images/logo.png" alt="Logo">
 
-                <img src="assets/images/logo.png">
+        <h1 class="logo-title">
+            <span>SHADY</span>
+            <span class="accent">NASR</span>
+        </h1>
 
-                <h1 class="hero-name">
+    </a>
 
-                    SHADY<span>NASR</span>
+    <button class="menu-toggle" id="menuToggle">
 
-                </h1>
+        <i class="fa-solid fa-bars"></i>
 
-            </div>
+    </button>
 
-            <ul>
+    <ul class="nav-links" id="navLinks">
 
-                <li><a href="#">Home</a></li>
+        <li><a href="#">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#certificates">Certificates</a></li>
+        <li><a href="#contact">Contact</a></li>
 
-                <li><a href="#about">About</a></li>
+    </ul>
 
-                <li><a href="#certificates">Certificates</a></li>
+    <a href="assets/files/Shady-Nasr-CV.pdf"
+       class="cv-btn"
+       download>
 
-                <li><a href="#contact">Contact</a></li>
+        Download CV
 
-            </ul>
+    </a>
 
-            <a href="assets/files/Shady-Nasr-CV.pdf" class="cv-btn" download>
-
-                Download CV
-
-            </a>
-
-        </nav>
-
-    </header>
+</nav>
 
     <!--================ HERO ================-->
 
