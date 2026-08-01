@@ -79,13 +79,17 @@
 
     .logo img {
 
-        width: 42px;
+        width: 38px;
+
+        height: 38px;
 
     }
 
     .logo-title {
 
-        font-size: 24px;
+        font-size: 18px;
+
+        gap: 5px;
 
     }
 
@@ -332,7 +336,7 @@
 
         right: -100%;
 
-        width: 280px;
+        width: 260px;
 
         height: calc(100vh - 85px);
 
@@ -344,15 +348,13 @@
 
         align-items: center;
 
-        justify-content: flex-start;
+        padding-top: 40px;
 
-        padding-top: 50px;
+        gap: 30px;
 
-        gap: 35px;
+        transition: .35s;
 
-        transition: .4s ease;
-
-        box-shadow: -10px 0 30px rgba(0, 0, 0, .35);
+        z-index: 999999;
 
     }
 
@@ -375,7 +377,7 @@
 
     .hero {
 
-        flex-direction: column-reverse;
+        flex-direction: column;
 
         text-align: center;
 
