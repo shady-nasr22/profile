@@ -1,115 +1,117 @@
-const track=document.querySelector(".certificate-track");
+const track = document.querySelector(".certificate-track");
 
-document.querySelector(".next").onclick=()=>{
+document.querySelector(".next").onclick = () => {
 
-track.scrollBy({
+    track.scrollBy({
 
-left:460,
+        left: 460,
 
-behavior:"smooth"
+        behavior: "smooth"
 
-});
-
-}
-
-document.querySelector(".prev").onclick=()=>{
-
-track.scrollBy({
-
-left:-460,
-
-behavior:"smooth"
-
-});
+    });
 
 }
 
-const lightbox=document.getElementById("lightbox");
+document.querySelector(".prev").onclick = () => {
 
-const lightboxImage=document.getElementById("lightbox-image");
+    track.scrollBy({
 
-document.querySelectorAll(".certificate").forEach(img=>{
+        left: -460,
 
-img.onclick=()=>{
+        behavior: "smooth"
 
-lightbox.style.display="flex";
-
-lightboxImage.src=img.src;
+    });
 
 }
+
+const lightbox = document.getElementById("lightbox");
+
+const lightboxImage = document.getElementById("lightbox-image");
+
+document.querySelectorAll(".certificate").forEach(img => {
+
+    img.onclick = () => {
+
+        lightbox.style.display = "flex";
+
+        lightboxImage.src = img.src;
+
+    }
 
 })
 
-document.querySelector(".close-lightbox").onclick=()=>{
+document.querySelector(".close-lightbox").onclick = () => {
 
-lightbox.style.display="none";
-
-}
-
-lightbox.onclick=e=>{
-
-if(e.target===lightbox){
-
-lightbox.style.display="none";
+    lightbox.style.display = "none";
 
 }
 
-}
+lightbox.onclick = e => {
 
+    if (e.target === lightbox) {
 
-function sendWhatsApp(){
+        lightbox.style.display = "none";
 
-const name=document.getElementById("name").value.trim();
-
-const phone=document.getElementById("phone").value.trim();
-
-const message=document.getElementById("message").value.trim();
-
-if(name==="" || phone==="" || message===""){
-
-alert("Please fill in all fields.");
-
-return;
+    }
 
 }
 
-const btn=document.getElementById("sendBtn");
 
-btn.classList.add("loading");
+function sendWhatsApp() {
 
-setTimeout(()=>{
+    const name = document.getElementById("name").value.trim();
 
-const text=
+    const phone = document.getElementById("phone").value.trim();
 
-`👤 Name: ${name}%0A`
+    const message = document.getElementById("message").value.trim();
 
-+
+    if (name === "" || phone === "" || message === "") {
 
-`📞 Phone: ${phone}%0A%0A`
+        alert("Please fill in all fields.");
 
-+
+        return;
 
-`💬 Message:%0A${message}`;
+    }
 
-window.open(
+    const btn = document.getElementById("sendBtn");
 
-`https://wa.me/201025130799?text=${text}`,
+    btn.classList.add("loading");
 
-"_blank"
+    setTimeout(() => {
 
-);
+        const text =
 
-btn.classList.remove("loading");
+            `👤 Name: ${name}%0A`
 
-document.getElementById("name").value="";
+            +
 
-document.getElementById("phone").value="";
+            `📞 Phone: ${phone}%0A%0A`
 
-document.getElementById("message").value="";
+            +
 
-},1000);
+            `💬 Message:%0A${message}`;
+
+        window.open(
+
+            `https://wa.me/201025130799?text=${text}`,
+
+            "_blank"
+
+        );
+
+        btn.classList.remove("loading");
+
+        document.getElementById("name").value = "";
+
+        document.getElementById("phone").value = "";
+
+        document.getElementById("message").value = "";
+
+    }, 1000);
 
 }
+
+
 
 document.addEventListener("selectstart", function (e) {
     e.preventDefault();
@@ -117,4 +119,29 @@ document.addEventListener("selectstart", function (e) {
 
 document.addEventListener("contextmenu", function (e) {
     e.preventDefault();
+});
+
+
+/*=========================
+NAVBAR
+=========================*/
+
+const menuToggle = document.getElementById("menuToggle");
+
+const navLinks = document.getElementById("navLinks");
+
+menuToggle.addEventListener("click", () => {
+
+    navLinks.classList.toggle("active");
+
+});
+
+document.querySelectorAll(".nav-links a").forEach(link => {
+
+    link.addEventListener("click", () => {
+
+        navLinks.classList.remove("active");
+
+    });
+
 });
