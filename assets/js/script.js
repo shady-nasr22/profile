@@ -1,61 +1,52 @@
 const track = document.querySelector(".certificate-track");
-
-document.querySelector(".next").onclick = () => {
-
-    track.scrollBy({
-
-        left: 460,
-
-        behavior: "smooth"
-
-    });
-
-}
-
-document.querySelector(".prev").onclick = () => {
-
-    track.scrollBy({
-
-        left: -460,
-
-        behavior: "smooth"
-
-    });
-
-}
-
+const nextBtn = document.querySelector(".next");
+const prevBtn = document.querySelector(".prev");
 const lightbox = document.getElementById("lightbox");
-
 const lightboxImage = document.getElementById("lightbox-image");
+const closeLightboxBtn = document.querySelector(".close-lightbox");
+const certificates = document.querySelectorAll(".certificate");
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
 
-document.querySelectorAll(".certificate").forEach(img => {
+function scrollTrack(direction) {
+    if (!track) return;
 
-    img.onclick = () => {
-
-        lightbox.style.display = "flex";
-
-        lightboxImage.src = img.src;
-
-    }
-
-})
-
-document.querySelector(".close-lightbox").onclick = () => {
-
-    lightbox.style.display = "none";
-
+    track.scrollBy({
+        left: direction * 460,
+        behavior: "smooth"
+    });
 }
 
-lightbox.onclick = e => {
-
-    if (e.target === lightbox) {
-
-        lightbox.style.display = "none";
-
-    }
-
+if (nextBtn) {
+    nextBtn.addEventListener("click", () => scrollTrack(1));
 }
 
+if (prevBtn) {
+    prevBtn.addEventListener("click", () => scrollTrack(-1));
+}
+
+certificates.forEach((img) => {
+    img.addEventListener("click", () => {
+        if (lightbox && lightboxImage) {
+            lightbox.style.display = "flex";
+            lightboxImage.src = img.src;
+        }
+    });
+});
+
+if (closeLightboxBtn) {
+    closeLightboxBtn.addEventListener("click", () => {
+        if (lightbox) lightbox.style.display = "none";
+    });
+}
+
+if (lightbox) {
+    lightbox.addEventListener("click", (e) => {
+        if (e.target === lightbox) {
+            lightbox.style.display = "none";
+        }
+    });
+}
 
 function sendWhatsApp() {
 
@@ -121,27 +112,14 @@ document.addEventListener("contextmenu", function (e) {
     e.preventDefault();
 });
 
-
-/*=========================
-NAVBAR
-=========================*/
-
-const menuToggle = document.getElementById("menuToggle");
-
-const navLinks = document.getElementById("navLinks");
-
-menuToggle.addEventListener("click", () => {
-
-    navLinks.classList.toggle("active");
-
-});
-
-document.querySelectorAll(".nav-links a").forEach(link => {
-
-    link.addEventListener("click", () => {
-
-        navLinks.classList.remove("active");
-
+if (menuToggle && navLinks) {
+    menuToggle.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
     });
 
-});
+    document.querySelectorAll(".nav-links a").forEach((link) => {
+        link.addEventListener("click", () => {
+            navLinks.classList.remove("active");
+        });
+    });
+}
