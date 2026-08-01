@@ -311,7 +311,6 @@
 
 }
 
-
 /* ==========================
    MOBILE NAVBAR
 ========================== */
@@ -378,76 +377,23 @@
 
     }
 
-    .cv-btn {
+    .nav-links a {
 
-        display: none;
+        text-decoration: none;
 
-    }
+        color: #ffffff;
 
-}
+        font-size: 18px;
 
+        font-weight: 500;
 
-@media(max-width:768px) {
-
-    .hero {
-
-        flex-direction: column;
-
-        text-align: center;
-
-        padding: 120px 20px 60px;
-
-        gap: 40px;
+        transition: .3s;
 
     }
 
-    .hero-left {
+    .nav-links a:hover {
 
-        align-items: center;
-
-    }
-
-    .hero-name {
-
-        justify-content: center;
-
-        font-size: 48px;
-
-    }
-
-    .hero-left h2 {
-
-        font-size: 24px;
-
-    }
-
-    .description {
-
-        max-width: 100%;
-
-        font-size: 16px;
-
-    }
-
-    .buttons {
-
-        justify-content: center;
-
-    }
-
-    .image-box {
-
-        width: 300px;
-
-    }
-
-    .follow {
-
-        display: flex;
-
-        flex-direction: column;
-
-        align-items: center;
+        color: #12D6FF;
 
     }
 
