@@ -1,62 +1,111 @@
+/* ==================================================
+   CERTIFICATE SLIDER
+================================================== */
+
 const track = document.querySelector(".certificate-track");
-const nextBtn = document.querySelector(".next");
-const prevBtn = document.querySelector(".prev");
+
+const nextButton = document.querySelector(".next");
+const prevButton = document.querySelector(".prev");
+
+
+if (track && nextButton && prevButton) {
+
+    nextButton.addEventListener("click", () => {
+
+        track.scrollBy({
+            left: 460,
+            behavior: "smooth"
+        });
+
+    });
+
+
+    prevButton.addEventListener("click", () => {
+
+        track.scrollBy({
+            left: -460,
+            behavior: "smooth"
+        });
+
+    });
+
+}
+
+
+/* ==================================================
+   CERTIFICATE LIGHTBOX
+================================================== */
+
 const lightbox = document.getElementById("lightbox");
 const lightboxImage = document.getElementById("lightbox-image");
-const closeLightboxBtn = document.querySelector(".close-lightbox");
+
 const certificates = document.querySelectorAll(".certificate");
-const menuToggle = document.getElementById("menuToggle");
-const navLinks = document.getElementById("navLinks");
 
-function scrollTrack(direction) {
-    if (!track) return;
 
-    track.scrollBy({
-        left: direction * 460,
-        behavior: "smooth"
-    });
-}
+if (lightbox && lightboxImage) {
 
-if (nextBtn) {
-    nextBtn.addEventListener("click", () => scrollTrack(1));
-}
+    certificates.forEach(img => {
 
-if (prevBtn) {
-    prevBtn.addEventListener("click", () => scrollTrack(-1));
-}
+        img.addEventListener("click", () => {
 
-certificates.forEach((img) => {
-    img.addEventListener("click", () => {
-        if (lightbox && lightboxImage) {
             lightbox.style.display = "flex";
+
             lightboxImage.src = img.src;
-        }
-    });
-});
 
-if (closeLightboxBtn) {
-    closeLightboxBtn.addEventListener("click", () => {
-        if (lightbox) lightbox.style.display = "none";
-    });
-}
+        });
 
-if (lightbox) {
-    lightbox.addEventListener("click", (e) => {
-        if (e.target === lightbox) {
+    });
+
+
+    const closeLightbox =
+        document.querySelector(".close-lightbox");
+
+
+    if (closeLightbox) {
+
+        closeLightbox.addEventListener("click", () => {
+
             lightbox.style.display = "none";
+
+        });
+
+    }
+
+
+    lightbox.addEventListener("click", (e) => {
+
+        if (e.target === lightbox) {
+
+            lightbox.style.display = "none";
+
         }
+
     });
+
 }
+
+
+/* ==================================================
+   WHATSAPP CONTACT
+================================================== */
 
 function sendWhatsApp() {
 
-    const name = document.getElementById("name").value.trim();
+    const name =
+        document.getElementById("name").value.trim();
 
-    const phone = document.getElementById("phone").value.trim();
+    const phone =
+        document.getElementById("phone").value.trim();
 
-    const message = document.getElementById("message").value.trim();
+    const message =
+        document.getElementById("message").value.trim();
 
-    if (name === "" || phone === "" || message === "") {
+
+    if (
+        name === "" ||
+        phone === "" ||
+        message === ""
+    ) {
 
         alert("Please fill in all fields.");
 
@@ -64,23 +113,24 @@ function sendWhatsApp() {
 
     }
 
-    const btn = document.getElementById("sendBtn");
+
+    const btn =
+        document.getElementById("sendBtn");
+
 
     btn.classList.add("loading");
+
 
     setTimeout(() => {
 
         const text =
 
-            `👤 Name: ${name}%0A`
+            `👤 Name: ${encodeURIComponent(name)}%0A` +
 
-            +
+            `📞 Phone: ${encodeURIComponent(phone)}%0A%0A` +
 
-            `📞 Phone: ${phone}%0A%0A`
+            `💬 Message:%0A${encodeURIComponent(message)}`;
 
-            +
-
-            `💬 Message:%0A${message}`;
 
         window.open(
 
@@ -90,7 +140,9 @@ function sendWhatsApp() {
 
         );
 
+
         btn.classList.remove("loading");
+
 
         document.getElementById("name").value = "";
 
@@ -98,34 +150,120 @@ function sendWhatsApp() {
 
         document.getElementById("message").value = "";
 
+
     }, 1000);
 
 }
 
 
+/* ==================================================
+   DISABLE TEXT SELECTION / RIGHT CLICK
+================================================== */
 
 document.addEventListener("selectstart", function (e) {
+
     e.preventDefault();
+
 });
+
 
 document.addEventListener("contextmenu", function (e) {
+
     e.preventDefault();
+
 });
 
-document.addEventListener("DOMContentLoaded", () => {
-    const menuToggle = document.getElementById("menuToggle");
-    const navLinks = document.getElementById("navLinks");
 
-    if (menuToggle && navLinks) {
-        menuToggle.addEventListener("click", () => {
+/* ==================================================
+   MOBILE NAVBAR
+================================================== */
+
+const menuToggle =
+    document.getElementById("menuToggle");
+
+const navLinks =
+    document.getElementById("navLinks");
+
+
+if (menuToggle && navLinks) {
+
+
+    /* ==========================
+       OPEN / CLOSE MENU
+    ========================== */
+
+    menuToggle.addEventListener("click", () => {
+
+        const isOpen =
             navLinks.classList.toggle("active");
-            console.log("Menu toggled");
+
+
+        menuToggle.setAttribute(
+            "aria-expanded",
+            isOpen
+        );
+
+
+        /* Change hamburger icon */
+
+        const icon =
+            menuToggle.querySelector("i");
+
+
+        if (icon) {
+
+            if (isOpen) {
+
+                icon.classList.remove("fa-bars");
+
+                icon.classList.add("fa-xmark");
+
+            } else {
+
+                icon.classList.remove("fa-xmark");
+
+                icon.classList.add("fa-bars");
+
+            }
+
+        }
+
+    });
+
+
+    /* ==========================
+       CLOSE MENU AFTER CLICKING LINK
+    ========================== */
+
+    document
+        .querySelectorAll(".nav-links a")
+        .forEach(link => {
+
+            link.addEventListener("click", () => {
+
+                navLinks.classList.remove("active");
+
+
+                menuToggle.setAttribute(
+                    "aria-expanded",
+                    "false"
+                );
+
+
+                const icon =
+                    menuToggle.querySelector("i");
+
+
+                if (icon) {
+
+                    icon.classList.remove("fa-xmark");
+
+                    icon.classList.add("fa-bars");
+
+                }
+
+            });
+
         });
 
-        document.querySelectorAll(".nav-links a").forEach((link) => {
-            link.addEventListener("click", () => {
-                navLinks.classList.remove("active");
-            });
-        });
-    }
-});
+}
