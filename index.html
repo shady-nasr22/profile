@@ -1,362 +1,669 @@
-<!DOCTYPE html>
-<html lang="en">
+<meta charset="UTF-8">
 
-<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta charset="UTF-8">
+<title>Shady Nasr | Portfolio</title>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Shady Nasr | Portfolio</title>
+<!--================ GOOGLE FONTS ================-->
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
 
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Orbitron:wght@500;700;800&display=swap"
-        rel="stylesheet">
+<link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Orbitron:wght@500;700;800&display=swap"
+    rel="stylesheet"
+>
 
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/responsive.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
-    <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-</head>
+<!--================ CSS ================-->
 
-<body>
+<link rel="stylesheet" href="assets/css/style.css">
 
-    <!--================ BACKGROUND ================-->
+<link rel="stylesheet" href="assets/css/responsive.css">
 
-    <div class="background-grid"></div>
 
-    <div class="background-glow"></div>
+<!--================ FONT AWESOME ================-->
 
-    <!--================ NAVBAR ================-->
+<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+>
 
-   <nav class="navbar">
 
-    <a href="#" class="logo">
+<!--================ BACKGROUND ================-->
 
-        <img src="assets/images/logo.png" alt="Logo">
+<div class="background-grid"></div>
 
-        <h1 class="logo-title">
-            <span>SHADY</span>
-            <span class="accent">NASR</span>
-        </h1>
+<div class="background-glow"></div>
 
-    </a>
 
-    <button class="menu-toggle" id="menuToggle">
+<!--================ NAVBAR ================-->
 
-        <i class="fa-solid fa-bars"></i>
+<header>
 
-    </button>
+    <nav class="navbar">
 
-    <ul class="nav-links" id="navLinks">
 
-        <li><a href="#">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#certificates">Certificates</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <!--================ LOGO ================-->
 
-    </ul>
+        <a href="#" class="logo">
 
-    <a href="assets/files/Shady-Nasr-CV.pdf"
-       class="cv-btn"
-       download>
+            <img
+                src="assets/images/logo.png"
+                alt="Shady Nasr Logo"
+            >
 
-        Download CV
+            <h1 class="logo-title">
 
-    </a>
+                <span>SHADY</span>
 
-</nav>
-
-    <!--================ HERO ================-->
-
-    <section class="hero">
-
-        <div class="hero-left">
-
-            <p class="hello">
-
-                Hi, I'm
-
-            </p>
-
-            <h1 class="hero-name">
-
-                SHADY<span>NASR</span>
+                <span class="accent">NASR</span>
 
             </h1>
 
-            <h2>
+        </a>
 
-                Information Engineer
 
-            </h2>
+        <!--================ MOBILE MENU BUTTON ================-->
 
-            <p class="description">
+        <button
+            class="menu-toggle"
+            id="menuToggle"
+            type="button"
+            aria-label="Toggle navigation"
+            aria-expanded="false"
+        >
 
-                Passionate about programming and networking.
+            <i class="fa-solid fa-bars"></i>
 
-                I build modern scalable systems and
-                develop reliable networking solutions.<br>
-                
-                مهندس تكنولوجيا معلومات خبير في مجال الشبكات والبرمجه واجتهد اللي التطوير في هذا المجال ومتخصص في شبكات الحاسوب
+        </button>
+
+
+        <!--================ NAVIGATION LINKS ================-->
+
+        <ul class="nav-links" id="navLinks">
+
+            <li>
+
+                <a href="#">
+                    Home
+                </a>
+
+            </li>
+
+
+            <li>
+
+                <a href="#about">
+                    About
+                </a>
+
+            </li>
+
+
+            <li>
+
+                <a href="#certificates">
+                    Certificates
+                </a>
+
+            </li>
+
+
+            <li>
+
+                <a href="#contact">
+                    Contact
+                </a>
+
+            </li>
+
+        </ul>
+
+
+        <!--================ CV BUTTON ================-->
+
+        <a
+            href="assets/files/Shady-Nasr-CV.pdf"
+            class="cv-btn"
+            download
+        >
+
+            Download CV
+
+        </a>
+
+    </nav>
+
+</header>
+
+
+<!--================ HERO ================-->
+
+<section class="hero">
+
+
+    <!--================ HERO TEXT ================-->
+
+    <div class="hero-left">
+
+
+        <p class="hello">
+
+            Hi, I'm
+
+        </p>
+
+
+        <h1 class="hero-name">
+
+            SHADY<span>NASR</span>
+
+        </h1>
+
+
+        <h2>
+
+            Information Engineer
+
+        </h2>
+
+
+        <p class="description">
+
+            Passionate about programming and networking.
+
+            I build modern scalable systems and
+            develop reliable networking solutions.<br>
+
+            مهندس تكنولوجيا معلومات خبير في مجال الشبكات والبرمجه واجتهد اللي التطوير في هذا المجال ومتخصص في شبكات الحاسوب
+
+        </p>
+
+
+        <!--================ BUTTONS ================-->
+
+        <div class="buttons">
+
+
+            <a
+                href="assets/files/Shady-Nasr-CV.pdf"
+                download
+                class="primary-btn"
+            >
+
+                Download CV
+
+            </a>
+
+
+            <a
+                href="https://wa.me/201025130799"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="secondary-btn"
+            >
+
+                Contact Me
+
+            </a>
+
+
+        </div>
+
+
+        <!--================ SOCIAL MEDIA ================-->
+
+        <div class="follow">
+
+
+            <p>
+
+                FOLLOW ME
 
             </p>
 
-            <div class="buttons">
 
-                <a href="assets/files/Shady-Nasr-CV.pdf" download class="primary-btn">
+            <div class="socials">
 
-                    Download CV
+
+                <!-- LinkedIn -->
+
+                <a
+                    href="https://www.linkedin.com/in/shady-nasr-247650417/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="LinkedIn"
+                >
+
+                    <i class="fa-brands fa-linkedin-in"></i>
 
                 </a>
 
-                <a href="https://wa.me/201025130799" target="_blank" class="secondary-btn">
 
-                    Contact Me
+                <!-- Facebook -->
+
+                <a
+                    href="https://www.facebook.com/shadynasr11"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Facebook"
+                >
+
+                    <i class="fa-brands fa-facebook-f"></i>
 
                 </a>
 
-            </div>
 
-            <div class="follow">
+                <!-- Instagram -->
 
-                <p>
+                <a
+                    href="https://www.instagram.com/shady_nassr/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Instagram"
+                >
 
-                    FOLLOW ME
+                    <i class="fa-brands fa-instagram"></i>
 
-                </p>
+                </a>
 
-                <div class="socials">
 
-                    <a href="https://www.linkedin.com/in/shady-nasr-247650417/" target="_blank">
+                <!-- TikTok -->
 
-                        <i class="fa-brands fa-linkedin-in"></i>
+                <a
+                    href="https://www.tiktok.com/@shadynasr.1?_r=1&_t=ZS-98VjXtmTiYZ"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="TikTok"
+                >
 
-                    </a>
+                    <i class="fa-brands fa-tiktok"></i>
 
-                    <a href="https://www.facebook.com/shadynasr11" target="_blank">
+                </a>
 
-                        <i class="fa-brands fa-facebook-f"></i>
-
-                    </a>
-
-                    <a href="https://www.instagram.com/shady_nassr/" target="_blank">
-
-                        <i class="fa-brands fa-instagram"></i>
-
-                    </a>
-
-                    <a href="https://www.tiktok.com/@shadynasr.1?_r=1&_t=ZS-98VjXtmTiYZ" target="_blank">
-
-                        <i class="fa-brands fa-tiktok"></i>
-
-                    </a>
-
-                </div>
 
             </div>
 
         </div>
 
-        <div class="hero-right">
-
-            <div class="image-box">
-
-                <img src="assets/images/hero.png">
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <!--================ ABOUT ================-->
-
-    <section id="about">
-
-        <p class="section-sub">
-            ABOUT ME
-        </p>
-
-        <h2 class="section-title">
-            Get To Know Me
-        </h2>
-
-        <div class="about-grid">
-
-            <div class="about-card">
-
-                <img src="assets/images/icons/user.png">
-
-                <h3>Who I Am</h3>
-
-                <p>
-
-                    I'm an Information Engineer passionate about
-                    programming and networking.
-
-                </p>
-
-            </div>
-
-            <div class="about-card">
-
-                <img src="assets/images/icons/education.png">
-
-                <h3>Education</h3>
-
-                <p>
-
-                    Bachelor's Degree in Information Technology
-                    with specialization in Computer Networks.
-
-                </p>
-
-            </div>
-
-            <div class="about-card">
-
-                <img src="assets/images/icons/experience.png">
-
-                <h3>Experience</h3>
-
-                <p>
-
-                    Networking, Web Development,
-                    Programming and IT Solutions.
-
-                </p>
-
-            </div>
-
-            <div class="about-card">
-
-                <img src="assets/images/icons/goal.png">
-
-                <h3>Goal</h3>
-
-                <p>
-
-                    Build modern solutions that combine
-                    software and networking.
-
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <!--================ CERTIFICATES ================-->
-
-    <section id="certificates">
-
-        <p class="section-sub">
-
-            MY CERTIFICATES
-
-        </p>
-
-        <h2 class="section-title">
-
-            Certifications
-
-        </h2>
-
-        <div class="certificate-slider">
-
-            <button class="slide-btn prev">
-
-                &#10094;
-
-            </button>
-
-            <div class="certificate-track">
-
-                <img src="assets/images/certificates/1.jpg" class="certificate">
-
-                <img src="assets/images/certificates/2.jpg" class="certificate">
-
-                <img src="assets/images/certificates/3.jpg" class="certificate">
-
-                <img src="assets/images/certificates/4.jpg" class="certificate">
-                
-                <img src="assets/images/certificates/5.jpg" class="certificate">
-
-                <img src="assets/images/certificates/6.jpg" class="certificate">
-
-                <img src="assets/images/certificates/7.jpg" class="certificate">
-
-                <img src="assets/images/certificates/8.jpg" class="certificate">
-
-                <img src="assets/images/certificates/9.jpg" class="certificate">
-
-            </div>
-
-            <button class="slide-btn next">
-
-                &#10095;
-
-            </button>
-
-        </div>
-
-    </section>
-
-    <div id="lightbox">
-
-        <span class="close-lightbox">&times;</span>
-
-        <img id="lightbox-image">
 
     </div>
 
-    <!--================ CONTACT ================-->
 
-    <section id="contact">
+    <!--================ HERO IMAGE ================-->
 
-        <p class="section-sub">
+    <div class="hero-right">
 
-            CONTACT ME
+        <div class="image-box">
 
-        </p>
-
-        <h2 class="section-title">
-
-            Let's Work Together
-
-        </h2>
-
-        <div class="contact-box">
-
-            <input type="text" id="name" placeholder="Your Name">
-
-            <input type="tel" id="phone" placeholder="Phone Number">
-
-            <textarea id="message" placeholder="Write your message"></textarea>
-
-            <button id="sendBtn" onclick="sendWhatsApp()">
-
-                <span class="btn-text">Send Message</span>
-
-                <div class="spinner"></div>
-
-            </button>
+            <img
+                src="assets/images/hero.png"
+                alt="Shady Nasr"
+            >
 
         </div>
 
-    </section>
-    <footer>
+    </div>
 
-        © 2026 Shady Nasr. All Rights Reserved.
 
-    </footer>
-    <script src="assets/js/script.js"></script>
-</body>
+</section>
+
+
+<!--================ ABOUT ================-->
+
+<section id="about">
+
+
+    <p class="section-sub">
+
+        ABOUT ME
+
+    </p>
+
+
+    <h2 class="section-title">
+
+        Get To Know Me
+
+    </h2>
+
+
+    <div class="about-grid">
+
+
+        <!-- Card 1 -->
+
+        <div class="about-card">
+
+            <img
+                src="assets/images/icons/user.png"
+                alt="User"
+            >
+
+            <h3>
+
+                Who I Am
+
+            </h3>
+
+
+            <p>
+
+                I'm an Information Engineer passionate about
+                programming and networking.
+
+            </p>
+
+        </div>
+
+
+        <!-- Card 2 -->
+
+        <div class="about-card">
+
+            <img
+                src="assets/images/icons/education.png"
+                alt="Education"
+            >
+
+            <h3>
+
+                Education
+
+            </h3>
+
+
+            <p>
+
+                Bachelor's Degree in Information Technology
+                with specialization in Computer Networks.
+
+            </p>
+
+        </div>
+
+
+        <!-- Card 3 -->
+
+        <div class="about-card">
+
+            <img
+                src="assets/images/icons/experience.png"
+                alt="Experience"
+            >
+
+            <h3>
+
+                Experience
+
+            </h3>
+
+
+            <p>
+
+                Networking, Web Development,
+                Programming and IT Solutions.
+
+            </p>
+
+        </div>
+
+
+        <!-- Card 4 -->
+
+        <div class="about-card">
+
+            <img
+                src="assets/images/icons/goal.png"
+                alt="Goal"
+            >
+
+            <h3>
+
+                Goal
+
+            </h3>
+
+
+            <p>
+
+                Build modern solutions that combine
+                software and networking.
+
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!--================ CERTIFICATES ================-->
+
+<section id="certificates">
+
+
+    <p class="section-sub">
+
+        MY CERTIFICATES
+
+    </p>
+
+
+    <h2 class="section-title">
+
+        Certifications
+
+    </h2>
+
+
+    <div class="certificate-slider">
+
+
+        <button
+            class="slide-btn prev"
+            type="button"
+            aria-label="Previous certificate"
+        >
+
+            &#10094;
+
+        </button>
+
+
+        <div class="certificate-track">
+
+
+            <img
+                src="assets/images/certificates/1.jpg"
+                class="certificate"
+                alt="Certificate 1"
+            >
+
+
+            <img
+                src="assets/images/certificates/2.jpg"
+                class="certificate"
+                alt="Certificate 2"
+            >
+
+
+            <img
+                src="assets/images/certificates/3.jpg"
+                class="certificate"
+                alt="Certificate 3"
+            >
+
+
+            <img
+                src="assets/images/certificates/4.jpg"
+                class="certificate"
+                alt="Certificate 4"
+            >
+
+
+            <img
+                src="assets/images/certificates/5.jpg"
+                class="certificate"
+                alt="Certificate 5"
+            >
+
+
+            <img
+                src="assets/images/certificates/6.jpg"
+                class="certificate"
+                alt="Certificate 6"
+            >
+
+
+            <img
+                src="assets/images/certificates/7.jpg"
+                class="certificate"
+                alt="Certificate 7"
+            >
+
+
+            <img
+                src="assets/images/certificates/8.jpg"
+                class="certificate"
+                alt="Certificate 8"
+            >
+
+
+            <img
+                src="assets/images/certificates/9.jpg"
+                class="certificate"
+                alt="Certificate 9"
+            >
+
+
+            <img
+                src="assets/images/certificates/10.png"
+                class="certificate"
+                alt="Certificate 10"
+            >
+
+
+        </div>
+
+
+        <button
+            class="slide-btn next"
+            type="button"
+            aria-label="Next certificate"
+        >
+
+            &#10095;
+
+        </button>
+
+
+    </div>
+
+</section>
+
+
+<!--================ LIGHTBOX ================-->
+
+<div id="lightbox">
+
+
+    <span class="close-lightbox">
+
+        &times;
+
+    </span>
+
+
+    <img
+        id="lightbox-image"
+        alt="Certificate Preview"
+    >
+
+
+</div>
+
+
+<!--================ CONTACT ================-->
+
+<section id="contact">
+
+
+    <p class="section-sub">
+
+        CONTACT ME
+
+    </p>
+
+
+    <h2 class="section-title">
+
+        Let's Work Together
+
+    </h2>
+
+
+    <div class="contact-box">
+
+
+        <input
+            type="text"
+            id="name"
+            placeholder="Your Name"
+        >
+
+
+        <input
+            type="tel"
+            id="phone"
+            placeholder="Phone Number"
+        >
+
+
+        <textarea
+            id="message"
+            placeholder="Write your message"
+        ></textarea>
+
+
+        <button
+            id="sendBtn"
+            type="button"
+            onclick="sendWhatsApp()"
+        >
+
+            <span class="btn-text">
+
+                Send Message
+
+            </span>
+
+
+            <div class="spinner"></div>
+
+
+        </button>
+
+
+    </div>
+
+</section>
+
+
+<!--================ FOOTER ================-->
+
+<footer>
+
+    © 2026 Shady Nasr. All Rights Reserved.
+
+</footer>
+
+
+<!--================ JAVASCRIPT ================-->
+
+<script src="assets/js/script.js"></script>
